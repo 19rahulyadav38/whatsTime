@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>whatsTime</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1{
+            font-size:12vw;
+        }
+
+        body{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex flex-row justify-content-center align-items-center   w-100 h-100 container-fluid">
+    <h1 class="  font-weight-bold  text-white  " id="demo">what is time</h1>
+</div>
+
+
+
+<script>
+// 
+
+function fun(){
+    const obj=new Date();
+    let hour=obj.getHours();
+    let minute=obj.getMinutes();
+    let second=obj.getSeconds();
+    
+    if(hour<10)
+    {
+      hour=  "0"+hour;
+    }
+    if(minute<10)
+    minute="0"+minute;
+
+    if(second<10)
+    second="0"+second;
+
+    document.getElementById("demo").innerHTML = hour +":"+minute+":"+second;
+  
+}
+ setInterval(fun,1000);
+
+</script>
+
+</body>
+</html>
